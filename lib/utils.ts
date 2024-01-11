@@ -1,12 +1,9 @@
 import { type ClassValue, clsx } from "clsx"
-import exp from "constants";
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-
-export const PUBLIC_DOMAIN = true ? "https://ec-hp-n6zg.vercel.app": "http://localhost:3000";
 
 export function formatNumberWithDots(number: string | number) {
   

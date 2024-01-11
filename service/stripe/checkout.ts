@@ -1,4 +1,4 @@
-import { PUBLIC_DOMAIN } from "@/lib/utils";
+import { PUBLIC_DOMAIN } from "@/lib/const";
 
 export async function fetchProducts() {
     const response = await fetch(PUBLIC_DOMAIN + "/api/products", {
