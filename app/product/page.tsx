@@ -13,7 +13,7 @@ const paymentLinks = [
   "https://buy.stripe.com/test_3cs6qf8npck02ekaEE",
 ];
 
-export async function Product() {
+async function Product() {
   const products = await fetchProducts();
   console.log("products: ", products);
 
