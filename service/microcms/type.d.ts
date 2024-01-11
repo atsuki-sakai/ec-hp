@@ -2,17 +2,17 @@
 
 type Category = {
     id: string
-    created_at: Date
-    updated_at: Date
-    published_at: Date
-    revised_at: Date
+    createdAt: string
+    upstringdAt: string
+    publishedAt: string
+    revisedAt: string
     name: string
 }
 export type Blog = {
     id: string
-    created_at: Date
-    updated_at: Date
-    revised_at: Date
+    createdAt: string
+    upstringdAt: string
+    revisedAt: string
     title: string
     content: string
     eyecatch: {
@@ -20,5 +20,15 @@ export type Blog = {
         height: number,
         width: number
     }
-    category: Category[]
+    category: Category
+}
+
+export type News = {
+    id: string,
+    createdAt: string,
+    updatedAt: string,
+    publishedAt: string,
+    revisedAt: string,
+    title: string,
+    content: string
 }

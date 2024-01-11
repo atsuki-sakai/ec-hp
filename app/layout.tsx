@@ -22,9 +22,15 @@ export default function RootLayout({
     <html lang="ja">
       <body className={inter.className}>
         <Providers>
-          <Header />
-          <main className="relative">{children}</main>
-          <MenuDrawer />
+          <div className="relative overflow-x-hidden h-min-screen">
+            <Header />
+            <main>
+              <div className="w-full max-w-[1100px] mt-[50px] mx-auto">
+                {children}
+              </div>
+            </main>
+            <MenuDrawer />
+          </div>
         </Providers>
       </body>
     </html>

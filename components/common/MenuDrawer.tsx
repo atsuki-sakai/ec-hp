@@ -45,7 +45,8 @@ const MenuDrawer = () => {
   }
   return (
     <div
-      className={`absolute top-0 left-0 z-40 w-screen h-full flex transition-all duration-300 ease-in ${
+      id="drawer"
+      className={`fixed top-0 left-0 z-40 w-screen h-full flex transition-all duration-300 ease-in ${
         showDrawer ? "translate-x-full" : "translate-x-0"
       } `}
     >
@@ -55,18 +56,22 @@ const MenuDrawer = () => {
       ></div>
       <div className="w-4/6 h-full bg-white p-4 shadow-md">
         <div className="flex justify-between items-center">
-          <p className="text-xl font-bold tracking-wider">Menu</p>
+          <p className="text-4xl font-bold tracking-wider">Menu</p>
           <button onClick={handleShowDrawer}>
             <GrClose />
           </button>
         </div>
         <div>
-          <ul className="my-8">
+          <ul className="my-12">
             {menuItems.map((menu, index) => {
               return (
-                <li key={index} className="my-3">
-                  <Link href={menu.href} onClick={handleShowDrawer}>
-                    <span className="py-2 border-b border-gray-500">
+                <li key={index} className="my-3 mb-5">
+                  <Link
+                    className="block transition-all duration-300 hover:-translate-y-1 w-fit"
+                    href={menu.href}
+                    onClick={handleShowDrawer}
+                  >
+                    <span className="py-2 border-b-2 transition-colors duration-300 hover:border-lime-700 text-black hover:text-lime-700  border-gray-300">
                       {menu.title}
                     </span>
                   </Link>

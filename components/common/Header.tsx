@@ -12,7 +12,7 @@ const Header = () => {
   }
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-20 flex justify-between items-center px-4 py-2 bg-slate-800 text-white">
+    <header className="fixed top-0 left-0 right-0 h-[50px] z-20 flex justify-between items-center px-4 py-2 bg-slate-900 text-white">
       <h2>EC × HP</h2>
       <button onClick={handleShowMenu}>
         <TbMenuDeep className="h-[24px] w-[24px]" />
